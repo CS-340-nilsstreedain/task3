@@ -9,8 +9,43 @@
 As you write your queries, it's good practice to run them over your own instance of the database. This way, we can see what our intermediate results look like. For example, if you are having trouble with producing the correct output for a query, you can try removing parts of the WHERE clause (or other components) to get an idea of what your SELECT statement is actually doing. Also, Gradescope will provide the expected results for each query's output (after you submit a file for grading). Use this to your advantage!
 
 ## Schema:
+### film
+- film_id
+- title
+- description
+- release_year
+- language_id
+- original_language_id
+- rental_duration
+- rental_rate
+- length
+- replacement_cost
 
-sakila-relevant-schema-3.png
+### category
+- category_id
+- name
+- last_update
+
+### language
+- language_id
+- name
+- last_update
+
+### film_category
+- film_id
+- category_id
+- last_update
+
+### actor
+- actor_id
+- first_name
+- last_name
+- last_update
+
+### film_actor
+- film_id
+- actor_id
+- last_update
 
 ## Questions:
 1. Find all **film_ids** of films with minimum length or maximum rental duration (compared to all other films). The returned list of film_ids should be sorted in descending order.
