@@ -14,8 +14,8 @@ As you write your queries, it's good practice to run them over your own instance
 - title
 - description
 - release_year
-- language_id
-- original_language_id
+- language_id - FK: language.language_id
+- original_language_id - FK: language.name
 - rental_duration
 - rental_rate
 - length
@@ -32,8 +32,8 @@ As you write your queries, it's good practice to run them over your own instance
 - last_update
 
 ### film_category
-- film_id
-- category_id
+- film_id - FK: film.film_id
+- category_id - FK: category.category_id
 - last_update
 
 ### actor
@@ -43,8 +43,8 @@ As you write your queries, it's good practice to run them over your own instance
 - last_update
 
 ### film_actor
-- film_id
-- actor_id
+- film_id - FK: film.film_id
+- actor_id - FK: actor.actor_id
 - last_update
 
 ## Questions:
